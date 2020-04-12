@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Merriweather:100,200,300,300i,400,400i,700');
 @import url('https://fonts.googleapis.com/css?family=Roboto+Slab:400,700');
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400');
-@media all and (max-width: 100vw){
+
 body {
   font-family: "Open Sans", serif;
 }
@@ -13,7 +13,6 @@ body {
   justify-content: center;
   align-items: center;
 }
-
 .main {
   height: 90vh;
   background: #fff;
@@ -35,7 +34,7 @@ body {
 
 .title-container__title {
   /* margin-bottom: 200px; */
-  font-size: 60px;
+  font-size: 50px;
   color:rgb(0,0,128);
   letter-spacing: 2px;
   line-height: 1.3;
@@ -45,7 +44,7 @@ body {
 .title-container__subtitle {
   color:rgb(0,0,128);
   font-style: italic;
-  font-size:2.19rem;
+  font-size:1.8rem;
   font-weight: 550;
   letter-spacing: 1px;
   line-height: 1.5;
@@ -70,7 +69,7 @@ input[type="text"] {
   letter-spacing: 2px;
   margin-bottom: 30px;
   margin-right: 20px;
-  font-size: 30px;
+  font-size: 20px;
 }
 
 input[type="text"] { 
@@ -135,4 +134,5 @@ button:active {
   letter-spacing: 1px;
   font-weight: 400;
 }
+@media all (max-width: 550px){
 }

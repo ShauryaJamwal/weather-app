@@ -29,9 +29,8 @@ class App extends React.Component{
 
     const api_call = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city},${country}&appid=${API_KEY}&units=metric`);
     const data = await api_call.json();
-    // console.log(data);    
-    if(city && country){
-      
+    // console.log(data);        
+      if(city && country){
         this.setState({
           temprature: data.main.temp,
           city : data.name,
@@ -44,9 +43,8 @@ class App extends React.Component{
           // temp_min:data.main.temp_min,
           temp_max:data.main.temp_max,
           error:"" 
-       })
-      
-    }
+        });
+      }
     else{
       this.setState({
         temprature: undefined,
@@ -60,9 +58,9 @@ class App extends React.Component{
         // temp_min:undefined,
         temp_max:undefined,
         error:"Please enter the values!!!"
-    });
-  }
-}  
+      });
+    }
+  }  
   render(){
       return(   
         <div>

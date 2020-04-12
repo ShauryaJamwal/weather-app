@@ -70,7 +70,7 @@ input[type="text"] {
   letter-spacing: 2px;
   margin-bottom: 30px;
   margin-right: 20px;
-  font-size: 20px;
+  font-size: 30px;
 }
 
 input[type="text"] { 
@@ -117,7 +117,7 @@ button:active {
   border-bottom: solid 2px rgb(71, 70, 70);
   padding: 20px 0 20px 0;
   font-weight: 600;
-  font-size: 2.48rem;
+  font-size: 2.47rem;
 }
 
 .weather__key:last-child {

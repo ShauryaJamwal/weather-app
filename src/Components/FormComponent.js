@@ -4,8 +4,8 @@ class FormComponent extends Component{
     render(){
         return(
             <form onSubmit={this.props.getWeather}>
-                <input type = "text" name="city" placeholder="Enter city..."/>
-                <input type = "text" name="country" placeholder="Enter country..."/>
+                <input type = "text" name="city" placeholder="City..."/>
+                <input type = "text" name="country" placeholder="Country..."/>
                 <button> <span className="btn-text">Search</span> </button>
             </form>
         );

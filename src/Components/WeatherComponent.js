@@ -38,7 +38,7 @@ class WeatherComponent extends Component{
                 {/* {this.props.temp_min && <p>Minimum Temprature: {this.props.temp_min}</p>} */}
                 {
                     this.props.temp_max && 
-                    <p className="weather__key">Maximum Temprature: 
+                    <p className="weather__key">Max Temprature: 
                         <span className="weather__value"> {this.props.temp_max}</span>
                     </p>
                 }

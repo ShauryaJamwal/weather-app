@@ -31,7 +31,7 @@ class App extends React.Component{
     const data = await api_call.json();
     // console.log(data);    
     if(city && country){
-      if(data.cod==404){
+      
         this.setState({
           temprature: data.main.temp,
           city : data.name,
@@ -45,7 +45,7 @@ class App extends React.Component{
           temp_max:data.main.temp_max,
           error:"" 
        })
-      }
+      
     }
     else{
       this.setState({

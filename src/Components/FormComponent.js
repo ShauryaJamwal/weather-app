@@ -6,7 +6,7 @@ class FormComponent extends Component{
             <form onSubmit={this.props.getWeather}>
                 <input type = "text" name="city" placeholder="Enter city..."/>
                 <input type = "text" name="country" placeholder="Enter country..."/>
-                <button> Get Weather </button>
+                <button> <span className="btn-text">Search</span> </button>
             </form>
         );
     }

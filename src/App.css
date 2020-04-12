@@ -7,7 +7,7 @@ body {
 }
 
 .wrapper {
-  background: linear-gradient(to right, #e67e22, #e74c3c);
+  background: linear-gradient(to right, #68DEF1, #1290EB);
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -20,7 +20,7 @@ body {
   box-shadow: 0px 13px 40px -13px rgba(0,0,0,0.75);
   width: 80%;
   margin: 0 auto;
-  background: url("img/bg3.jpg") center center no-repeat;
+  background: url("img/bg7.jpg") center center no-repeat;
   background-size: cover;
 }
 
@@ -35,17 +35,18 @@ body {
 
 .title-container__title {
   /* margin-bottom: 200px; */
-  font-size: 50px;
-  color:#fff;
+  font-size: 60px;
+  color:rgb(0,0,128);
   letter-spacing: 2px;
   line-height: 1.3;
   font-family: 'Roboto Slab', serif;
 }
 
 .title-container__subtitle {
-  color:#fff;
+  color:rgb(0,0,128);
   font-style: italic;
-  font-weight: 100;
+  font-size:2.19rem;
+  font-weight: 550;
   letter-spacing: 1px;
   line-height: 1.5;
   font-family: "Merriweather", serif;
@@ -61,7 +62,7 @@ body {
 input[type="text"] {
   background-color: transparent;
   border: 0;
-  border-bottom: solid 1px #fff;
+  border-bottom: solid 1px rgb(71, 70, 70);
   width: 30%;
   padding-bottom: 4px;
   color:#fff !important;
@@ -76,26 +77,32 @@ input[type="text"] {
     outline: none;
 }
 
-/* input:-webkit-autofill {
-    -webkit-box-shadow: 0 0 0 30px rgb(75, 148, 243) inset;
-} */
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 30px #63D3E5 inset;
+    -webkit-text-fill-color: #fff !important;
+}
 
 button {
   border: 0;
-  padding: 8px 20px;
-  margin: 0 2px;
-  border-radius: 2px;
-  font-weight: bold;
+  padding: 10px 10px;
+  margin: 2 2px;
+  border-radius: 2.5px;
+  border-color: rgb(71, 70, 70);
+  font-weight: 400;
   letter-spacing: 1px;
-  font-size: 15px;
+  font-size: 10px;
   cursor: pointer;
-  background-color: #1c941c;
+  background-color: transparent;
   color: #fff;
-  font-weight: 100;
 }
 
+.btn-text{
+  font-size: x-large;
+  font-weight: 700;
+  color:rgb(0,0,128);
+}
 button:active {
-  outline: none;
+  outline-color: rgb(71, 70, 70);
 }
 
 .weather__info {
@@ -106,25 +113,25 @@ button:active {
 }
 
 .weather__key {
-  color: #060477;
-  border-bottom: solid 2px rgba(255,255,255,0.06);
+  color:rgb(25,25,112);
+  border-bottom: solid 2px rgb(71, 70, 70);
   padding: 20px 0 20px 0;
   font-weight: 600;
-  font-size: 2.18rem;
+  font-size: 2.48rem;
 }
 
 .weather__key:last-child {
-  border: 0;
+  border-bottom: solid 2px rgb(71, 70, 70);
 }
 
 .weather__value {
-  color: rgb(12, 75, 170);
-  font-weight: 200;
+  color:#rgb(25,25,112);
+  font-weight: 300;
 }
 
 .weather__error {
-  color: #f16051;
-  font-size: 20px;
+  color: #c41502;
+  font-size: 25px;
   letter-spacing: 1px;
-  font-weight: 200;
+  font-weight: 400;
 }

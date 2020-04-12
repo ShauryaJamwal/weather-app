@@ -83,8 +83,8 @@ input:-webkit-autofill {
 
 button {
   border: 0;
-  padding: 10px 10px;
-  margin: 2 2px;
+  padding: 5px 5px;
+  margin: 0 2px;
   border-radius: 2.5px;
   border-color: rgb(71, 70, 70);
   font-weight: 400;
@@ -135,6 +135,10 @@ button:active {
   font-weight: 400;
 }
 @media(max-width: 550px){
+  .main {
+    width: 90%;
+    background: url("img/bg5.jpg") center center no-repeat;
+  }
   .title-container__title {
     /* margin-bottom: 200px; */
     font-size: 25px;
@@ -152,15 +156,16 @@ button:active {
     font-weight: lighter;
     letter-spacing: 1px;
     font-size: 10px;
+    width: 23.7%;
   }
   button {
-    border-radius: 1.5px;
-    font-weight: 200;
-    font-size: 7px;
+    border-radius: 1px;
+    font-weight: 100;
+    font-size: .5rem;
   }
   .btn-text{
-    font-size: initial;
-    font-weight: 300;
+    font-size: 1.2rem;
+    font-weight: 100;
   }
   .weather__info {
     font-size: 10px;
@@ -169,8 +174,8 @@ button:active {
   }
   .weather__key {
     border-bottom: solid 1px rgb(71, 70, 70);
-    font-weight: 400;
-    font-size: 1.8rem;
+    font-weight: 200;
+    font-size: 1.1rem;
   }
   .weather__key:last-child {
     border-bottom: solid 1px rgb(71, 70, 70);

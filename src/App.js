@@ -1,4 +1,4 @@
-import React,{Component} from "react";
+import React, { useDebugValue } from "react";
 
 import HeaderComponent from './Components/HeaderComponent.js';
 import FormComponent from './Components/FormComponent';
@@ -6,14 +6,19 @@ import WeatherComponent from './Components/WeatherComponent';
 
 const API_KEY = "a828e7aee2ea09c891d36f1e093686de";
 
-class App extends Component{
+class App extends React.Component{
 
   state = {
     temprature : undefined,
     city : undefined,
     country : undefined,
     humidity : undefined,
+    pressure : undefined,
     description: undefined,
+    // sunrise: undefined,
+    // sunset: undefined,
+    // temp_min:undefined,
+    temp_max:undefined,
     error : undefined
   }
 
@@ -24,16 +29,23 @@ class App extends Component{
 
     const api_call = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city},${country}&appid=${API_KEY}&units=metric`);
     const data = await api_call.json();
-    if(city===true && country===true){
-      console.log(data);
-      this.setState({
-        temprature: data.main.temp,
-        city : data.name,
-        country:data.sys.country,
-        humidity:data.main.humidity,
-        description:data.weather[0].description,
-        error:"" 
-      })
+    // console.log(data);    
+    if(city && country){
+      if(data.cod==404){
+        this.setState({
+          temprature: data.main.temp,
+          city : data.name,
+          country:data.sys.country,
+          humidity:data.main.humidity,
+          pressure:data.main.pressure,
+          description:data.weather[0].description,
+          // sunrise:data.sys.sunrise,
+          // sunset:data.sys.sunset,
+          // temp_min:data.main.temp_min,
+          temp_max:data.main.temp_max,
+          error:"" 
+       })
+      }
     }
     else{
       this.setState({
@@ -41,7 +53,12 @@ class App extends Component{
         city : undefined,
         country:undefined,
         humidity:undefined,
+        pressure:undefined,
         description:undefined,
+        // sunrise: undefined,
+        // sunset: undefined,
+        // temp_min:undefined,
+        temp_max:undefined,
         error:"Please enter the values!!!"
     });
   }
@@ -49,18 +66,38 @@ class App extends Component{
   render(){
       return(   
         <div>
-          <HeaderComponent />
-          <FormComponent getWeather={this.getWeather}/>
-          <WeatherComponent 
-            temprature = {this.state.temprature}
-            city = {this.state.city}
-            country = {this.state.country}
-            humidity = {this.state.humidity}
-            description = {this.state.description}
-            error = {this.state.error}
-          />
+          <div className="wrapper">
+            <div className="main">
+              <div className="container">
+                <div className="row">
+                  <div className="col-xs-6 title-container">
+                   <HeaderComponent />
+                  </div>
+                  <div className="col-xs-6 form-container">
+                   <FormComponent getWeather={this.getWeather}/>
+                   <WeatherComponent 
+                    temprature = {this.state.temprature}
+                    city = {this.state.city}
+                    country = {this.state.country}
+                    humidity = {this.state.humidity}
+                    pressure = {this.state.pressure}
+                    description = {this.state.description}
+                    // sunrise = {this.state.sunrise}
+                    // sunset = {this.state.sunset}
+                    // temp_min = {this.state.temp_min}
+                    temp_max = {this.state.temp_max}
+                    error = {this.state.error}
+                   />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       )
     }    
 }
 export default App;
+
+         
+          

@@ -62,14 +62,14 @@ input[type="text"] {
   background-color: transparent;
   border: 0;
   border-bottom: solid 1px rgb(71, 70, 70);
-  width: 30%;
-  padding-bottom: 4px;
+  width: 35%;
+  padding-bottom: 5px;
   color:#fff !important;
-  font-weight: lighter;
+  font-weight: 650;
   letter-spacing: 2px;
   margin-bottom: 30px;
   margin-right: 20px;
-  font-size: 20px;
+  font-size: 25px;
 }
 
 input[type="text"] { 

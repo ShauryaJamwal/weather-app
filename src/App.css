@@ -174,8 +174,8 @@ button:active {
   }
   .weather__key {
     border-bottom: solid 1px rgb(71, 70, 70);
-    font-weight: 200;
-    font-size: 1.1rem;
+    font-weight: 500;
+    font-size: 1.15rem;
   }
   .weather__key:last-child {
     border-bottom: solid 1px rgb(71, 70, 70);

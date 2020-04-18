@@ -11,9 +11,9 @@ class WeatherComponent extends Component{
                     </p>
                 }
                 {
-                    this.props.temprature && 
-                    <p className="weather__key">Temprature: 
-                        <span className="weather__value"> {this.props.temprature}</span>
+                    this.props.temperature && 
+                    <p className="weather__key">Temperature: 
+                        <span className="weather__value"> {this.props.temperature}</span>
                     </p>
                 }
                 {

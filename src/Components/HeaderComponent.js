@@ -5,7 +5,7 @@ class HeaderComponent extends Component{
         return(
             <div>
                 <h1 className ="title-container__title">Weather Detector:</h1>
-                <h4 className ="title-container__subtitle">Find out temprature conditions and more...</h4>
+                <h4 className ="title-container__subtitle">Find out temperature conditions and more...</h4>
             </div>
         );
     }
